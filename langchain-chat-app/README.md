@@ -164,15 +164,3 @@ docker logs <streamlit-container-id>
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🆘 Support
-
-For issues and questions:
-
-1. Check the troubleshooting section above
-2. Review the logs for error details
-3. Open an issue on GitHub with:
-   - Error messages
-   - Steps to reproduce
-   - Environment details
-
----
