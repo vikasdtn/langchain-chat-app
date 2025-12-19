@@ -6,7 +6,7 @@ A modern chat application powered by AWS Bedrock and LangChain, featuring a Stre
 
 This application follows a microservices architecture leveraging AWS services for AI-powered chat functionality:
 
-![Architecture Diagram](https://github.com/vikasdtn/langchain-chat-app/langchain-chat-app/arch.jpg)
+![Architecture Diagram](https://github.com/vikasdtn/langchain-chat-app/blob/main/langchain-chat-app/arch.jpg))
 
 The system consists of three main components working together:
 
