@@ -1,7 +1,7 @@
 # AWS Bedrock Chat Assistant
 
-A streamlit chat application powered by AWS Bedrock and LangChain, featuring a Streamlit frontend and FastAPI backend service. 
-While this application servers as a good demo to learn about how these systems works, it can also be expanded to the following use cases where the application can download and build upon :
+A streamlit chat application powered by Amazon Bedrock, Amazon Bedrock AgentCore, Amazon ECS and LangChain, featuring a Streamlit frontend and FastAPI backend service. 
+While this application servers as a good demo to learn about how these service & framework works together, it can also be expanded to the following use cases where the application can download and build upon :
 1. **Customer Support Systems** - Add knowledge bases, ticket creation, escalation workflows
 2. **Internal Help Desks** - Integrate with company documentation, HR policies, IT procedures
 3. **Sales Assistant Bots** - Connect to CRM systems, product catalogs, pricing engines
@@ -78,4 +78,3 @@ This application follows a microservices architecture leveraging AWS services fo
 | README.md                 # This readme
 ```
 
-**Built with ❤️ using AWS Bedrock, LangChain, FastAPI, and Streamlit**
