@@ -1,4 +1,4 @@
-# AWS Bedrock Chat Assistant
+# Langchain Knowledge App on Amazon Bedrock AgentCore 
 
 A streamlit chat application powered by Amazon Bedrock, Amazon Bedrock AgentCore, Amazon ECS and LangChain, featuring a Streamlit frontend and FastAPI backend service. 
 While this application servers as a good demo to learn about how these service & framework works together, it can also be expanded to the following use cases where the application can download and build upon :
