@@ -4,10 +4,50 @@ A modern chat application powered by AWS Bedrock and LangChain, featuring a Stre
 
 ## 🏗️ Architecture
 
-This project consists of two main services:
+This application follows a microservices architecture with two main components:
 
-- **Streamlit App** (`streamlit_app/`) - Web-based chat interface with AWS-styled UI
-- **Agent Service** (`agent_service/`) - FastAPI backend that interfaces with AWS Bedrock
+```
+┌─────────────────┐    HTTP/REST    ┌─────────────────┐    AWS SDK    ┌─────────────────┐
+│                 │    Requests     │                 │   Bedrock     │                 │
+│  Streamlit App  │ ──────────────► │  Agent Service  │ ────────────► │  AWS Bedrock    │
+│   (Frontend)    │                 │   (Backend)     │               │ Claude 3.5 LLM  │
+│                 │                 │                 │               │                 │
+└─────────────────┘                 └─────────────────┘               └─────────────────┘
+      Port 8501                           Port 8000                         Cloud Service
+```
+
+### Component Details:
+
+- **Streamlit App** (`streamlit_app/`)
+  - Web-based chat interface with AWS-styled UI
+  - Handles user interactions and message display
+  - Communicates with Agent Service via HTTP requests
+  - Manages chat history and session state
+
+- **Agent Service** (`agent_service/`)
+  - FastAPI backend that processes chat requests
+  - Integrates with AWS Bedrock using LangChain
+  - Provides REST API endpoints for chat functionality
+  - Handles authentication and request formatting for AWS services
+
+- **AWS Bedrock**
+  - Cloud-based AI service providing Claude 3.5 Sonnet model
+  - Processes natural language queries and generates responses
+  - Managed service requiring AWS credentials and proper IAM permissions
+
+## 📁 Project Structure
+
+```
+├── agent_service/
+│   ├── app.py              # FastAPI backend service
+│   ├── Dockerfile          # Docker configuration
+│   └── requirements.txt    # Python dependencies
+├── streamlit_app/
+│   ├── app.py              # Streamlit frontend
+│   ├── Dockerfile          # Docker configuration
+│   └── requirements.txt    # Python dependencies
+└── README.md
+```
 
 ## ✨ Features
 
@@ -85,21 +125,7 @@ This project consists of two main services:
    streamlit run app.py
    ```
 
-## 📁 Project Structure
-
-```
-├── agent_service/
-│   ├── app.py              # FastAPI backend service
-│   ├── Dockerfile          # Docker configuration
-│   └── requirements.txt    # Python dependencies
-├── streamlit_app/
-│   ├── app.py              # Streamlit frontend
-│   ├── Dockerfile          # Docker configuration
-│   └── requirements.txt    # Python dependencies
-└── README.md
-```
-
-## 🔧 Configuration
+## � ConfigurSation
 
 ### Agent Service Configuration
 
